@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeOS Linux 1.0 - Official Website</title>
+    <style>
+        :root {
+            --primary-aqua: #00d2ff;
+            --secondary-blue: #3a7bd5;
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 50%, #004e92 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Frutiger Aero Glossy Bubbles/Effects background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 80%, rgba(0,255,200,0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 31, 63, 0.37);
+            margin-bottom: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .mascot-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            margin: 20px 0;
+            border: 2px solid rgba(255,255,255,0.6);
+        }
+
+        .dev-time {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #ff8008, #ffc837);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin: 15px 0;
+        }
+
+        /* Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.5);
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: 0;
+        }
+
+        /* Buttons Style */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .aero-btn {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
+            border: 1px solid #fff;
+            color: #004e92;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1), inset 0 2px 3px rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .aero-btn:hover {
+            background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.6));
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2), inset 0 2px 3px rgba(255,255,255,1);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CubeOS Linux 1.0</h1>
+        <p class="tagline">Custom Identity Unveiled — Powered by Debian 12 & XFCE</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Sectiunea Mascotei Pux -->
+        <section class="glass-card">
+            <h2>Mascota Oficială: Pux</h2>
+            <p>El este Pux, pinguinul unic cu cioc de rață, simbolul oficial al libertății și inovației din CubeOS!</p>
+            
+            <img src="image_3.png" alt="CubeOS Linux 1.0 Mascot Pux" class="mascot-img">
+            
+            <div class="dev-time">⏱️ La acest sistem de operare s-a lucrat timp de 3 luni!</div>
+        </section>
+
+        <!-- Sectiunea Video Trailer -->
+        <section class="glass-card">
+            <h2>Trailer Oficial de Lansare</h2>
+            <p>Urmărește prezentarea oficială a sistemului de operare CubeOS 1.0 pe YouTube:</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/8AOdBMcKVco" title="CubeOS Introduction" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Sectiunea Download & Link-uri -->
+        <section class="glass-card">
+            <h2>Ecosistem & Download</h2>
+            <p>Descarcă sistemul de operare sau explorează celelalte proiecte din portofoliu:</p>
+            <div class="btn-group" id="link-container">
+                <a href="https://archive.org/details/cube-os" class="aero-btn" target="_blank">📥 Download ISO (Internet Archive)</a>
+                <a href="#" class="aero-btn" target="_blank">🛡️ TuxSec-Lab</a>
+                <a href="#" class="aero-btn" target="_blank">🐧 Despre-Linux-RO</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CubeOS Project. Toate drepturile rezervate. Construit cu pasiune pentru Linux.</p>
+    </footer>
+
+</body>
+</html>
